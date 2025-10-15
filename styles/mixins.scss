@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@mixin item{
+    padding: 1.5rem;
+    border-radius: $radius;
+    background-color: rgb(236, 236, 236);
+}
