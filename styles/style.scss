@@ -1,0 +1,94 @@
+@use "variablar";
+@use "mixins" as *; // mixins används direkt
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: variablar.$background-color;
+  color: variablar.$text-color;
+}
+
+header {
+  @include header-style(variablar.$primary-color, variablar.$header-radius);
+  @include flex-center(row, space-between, center);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+}
+
+/* Navigation */
+nav {
+  position: relative;
+
+  .menu {
+    list-style: none;
+    @include flex-center(row, flex-start, center);
+    gap: 20px;
+
+    li a {
+      @include link-hover(variablar.$text-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      position: absolute;
+      top: 90px;
+      left: -50px;
+      flex-direction: column;
+      width: 200px;
+      border: 1px solid #ddd;
+      display: none;
+      background-color: variablar.$primary-color; // samma som header
+      z-index: 10;
+    }
+
+    .menu li {
+      padding: 10px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+footer {
+  background-color: variablar.$footer-bg;
+  color: variablar.$footer-text;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}

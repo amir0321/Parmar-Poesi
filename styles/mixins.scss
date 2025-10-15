@@ -1,0 +1,27 @@
+@use "sass:color";
+
+// Hover-effekt för länkar
+@mixin link-hover($color) {
+  color: $color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: color.adjust($color, $lightness: -15%);
+  }
+}
+
+// Flexbox center
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Header-stil med border-radius och bakgrund
+@mixin header-style($bg-color, $radius: 0) {
+  background-color: $bg-color;
+  border-radius: $radius;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
