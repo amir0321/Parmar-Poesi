@@ -18,7 +18,7 @@ html, body {
 }
 
 /* Has navigation elements*/
-.showcase{
+.nav-section{
     list-style:none;
 
     display:flex;
