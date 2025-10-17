@@ -21,7 +21,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0 40px;
+  padding: 0 30px;
 
   .header-container {
     @include flex-center(row, space-between, center);
@@ -29,6 +29,11 @@ header {
     margin: 0 auto;
     width: 100%;
     gap: 40px;
+
+    .logo {
+      width: 150px;
+      margin-left: -25px;
+    }
   }
 }
 
@@ -39,7 +44,6 @@ nav {
     list-style: none;
     @include flex-center(row, flex-start, center);
     gap: 40px;
-    margin-bottom: 10px;
 
     li a {
       @include link-hover(variablar.$text-color);
@@ -58,7 +62,7 @@ nav {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   #menu-toggle {
@@ -145,7 +149,6 @@ main {
       padding: 10px;
       background: linear-gradient(rgba(255, 248, 240, 0.53), rgba(255, 248, 240, 0.703)),
            url('/images/main.jpg') center/cover no-repeat;;
-      
     }
 
     #menu-toggle:checked + .menu-icon + .menu {

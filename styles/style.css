@@ -18,7 +18,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0 40px;
+  padding: 0 30px;
 }
 header .header-container {
   display: flex;
@@ -29,6 +29,10 @@ header .header-container {
   margin: 0 auto;
   width: 100%;
   gap: 40px;
+}
+header .header-container .logo {
+  width: 150px;
+  margin-left: -25px;
 }
 
 nav {
@@ -41,7 +45,6 @@ nav .menu {
   justify-content: flex-start;
   align-items: center;
   gap: 40px;
-  margin-bottom: 10px;
 }
 nav .menu li a {
   color: #2B2B2B;
@@ -63,7 +66,7 @@ nav .menu-icon {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 nav #menu-toggle {
   display: none;
