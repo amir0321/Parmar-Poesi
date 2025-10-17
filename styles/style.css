@@ -15,8 +15,6 @@ body {
 }
 
 header {
-  position: sticky;
-  top: 0;
   z-index: 1000;
   padding: 0 30px;
 }
@@ -29,6 +27,8 @@ header .header-container {
   margin: 0 auto;
   width: 100%;
   gap: 40px;
+  position: sticky;
+  top: 0;
 }
 header .header-container .logo {
   width: 150px;
@@ -64,7 +64,7 @@ nav .menu li a:hover {
 }
 nav .menu-icon {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
   margin-bottom: 10px;
 }
