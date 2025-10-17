@@ -12,6 +12,36 @@ html, body {
     background-color: rgb(245, 245, 245);
 }
 
+p.tag-style-1 {
+    background-color: rgb(204, 53, 53);
+    color: white;
+}
+
+p.tag-style-2 {
+    background-color: rgb(253, 184, 236);
+    color: white;
+}
+
+p.tag-style-3 {
+    background-color: rgb(253, 184, 236);
+    color: rgb(160, 51, 51);
+}
+
+button.button-style-1 {
+    background-color: rgb(204, 53, 53);
+    color: white;
+}
+
+button.button-style-2 {
+    background-color: rgb(253, 184, 236);
+    color: white;
+}
+
+button.button-style-3 {
+    background-color: rgb(253, 184, 236);
+    color: rgb(160, 51, 51);
+}
+
 /* Has elements like title, text and the showcase, displayed in column */
 .content-box{
     display:flex;
@@ -110,20 +140,92 @@ html, body {
         {
             gap: 0.5rem;
         }
-        .sign-up-button{
+        .reg_button{
             width: 120px;
-            background-color: rgb(255, 113, 120);
             border: none;
             border-radius: 0.5rem;
             padding: 0.5rem 1rem;
             cursor: pointer;
-            color: white;
 
             &:hover {
                 background-color: rgb(255, 87, 96);
             }
         }
     }
+}
+
+.nav-news-section{
+    list-style:none;
+
+    display:flex;
+    flex-direction: rows;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: stretch;
+
+    gap: 1rem;
+
+    width: 100%;
+    height: auto;
+
+    .nav-news-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+        max-width: 40vw;
+        min-width: 300px;
+
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+
+        background-color: rgb(253, 243, 237);
+    }
+
+    button.read-more{
+        display: flex;
+        justify-content: left;
+
+        color: rgb(160, 51, 51);
+
+        width: 50%;
+
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(255, 87, 96);
+        }
+    }
+
+}
+
+.tag-info-wrapper {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+h3 {
+    font-size: large;
+    font-weight: bold;
+    color: #333;
+}
+
+.detail-text {
+    font-size: small;
+    color: #555;
+}
+
+.tag {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
 }
 
 
