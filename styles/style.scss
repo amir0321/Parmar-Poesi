@@ -1,5 +1,5 @@
-@use "variablar";
 @use "mixins" as *;
+@use "variablar";
 
 * {
   margin: 0;
@@ -11,23 +11,22 @@ body {
   font-family: 'Arial', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   color: variablar.$text-color;
+  background-color: #fff;
 }
 
-/* HEADER */
+.backgrund {
+  background: variablar.$main-bg;
+}
+
 header {
-  @include header-style(variablar.$primary-color, variablar.$header-radius);
   @include flex-center(row, space-between, center);
   padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  max-height: 100px;
 }
 
-.logo {
-  width: 100px;
-}
-
-/* NAVIGATION */
 nav {
   position: relative;
 
@@ -40,10 +39,11 @@ nav {
       @include link-hover(variablar.$text-color);
       font-weight: bold;
       text-decoration: none;
+      color: variablar.$text-color;
       transition: color 0.3s ease;
 
       &:hover {
-        color: red;
+        color: variablar.$accent;
       }
     }
   }
@@ -59,43 +59,52 @@ nav {
   }
 }
 
-/* BUTTONS */
+
 .book-button,
 .event-button {
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+  @include main();
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: darkred;
-  }
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 .book-button {
-  background-color: red;
+  background-color: variablar.$accent;
+  color: #fff;
+
+  &:hover {
+    background-color: variablar.$accent-hover;
+  }
 }
 
 .event-button {
   background: none;
-  color: red;
-  border: 1px solid red;
+  color: variablar.$accent;
+  border: 1px solid variablar.$accent;
+
+  &:hover {
+    background-color: variablar.$accent-hover;
+    color: #fff;
+  }
 }
 
+
 main {
-  padding: 2rem;
+  padding: 1rem;
   min-height: 90vh;
   text-align: center;
+
+  .main-icon {
+    margin: 1.4rem;
+  }
 
   h1 {
     margin: 4rem 0 2rem 0;
     font-size: 3rem;
+    color: variablar.$text-color;
+
     span {
-      color: red;
+      color: variablar.$accent;
     }
   }
 
@@ -103,6 +112,7 @@ main {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.1rem;
+    color: variablar.$text-secondary;
   }
 
   .actions-buttons {
@@ -113,17 +123,7 @@ main {
   }
 }
 
-/* FOOTER */
-footer {
-  background-color: variablar.$footer-bg;
-  color: variablar.$footer-text;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-  width: 100%;
-}
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   nav {
     .menu {
@@ -132,11 +132,11 @@ footer {
       right: -20px;
       flex-direction: column;
       width: 180px;
-      background-color: variablar.$primary-color;
       display: none;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       padding: 10px;
+      background-color: rgba(255, 255, 255, 0.95);
     }
 
     #menu-toggle:checked + .menu-icon + .menu {
@@ -151,5 +151,13 @@ footer {
   .actions-buttons {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    .book-button,
+    .event-button {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
