@@ -120,6 +120,8 @@ button.button-style-3 {
         padding: 0.5rem;
         border-radius: 0.5rem;
 
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
         background-color: rgb(255, 255, 255);
 
         .event-icon-wrapper{
@@ -158,7 +160,7 @@ button.button-style-3 {
     list-style:none;
 
     display:flex;
-    flex-direction: rows;
+    flex-direction: column;
     justify-content: center;
     flex-flow: row wrap;
     align-items: stretch;
@@ -173,12 +175,11 @@ button.button-style-3 {
         flex-direction: column;
         justify-content: left;
 
-        max-width: 40vw;
-        min-width: 300px;
-
         gap: 0.5rem;
         padding: 0.5rem;
         border-radius: 0.5rem;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
         background-color: rgb(253, 243, 237);
     }
@@ -208,10 +209,21 @@ button.button-style-3 {
     gap: 1rem;
 }
 
-h3 {
+.content-title {
+    font-size: x-large;
+    font-weight: bold;
+    color: #222;
+}
+
+.item-title {
     font-size: large;
     font-weight: bold;
     color: #333;
+}
+
+.content-subtitle {
+    font-size: medium;
+    color: #666;
 }
 
 .detail-text {
@@ -226,6 +238,33 @@ h3 {
 
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    .nav-book-section {
+        width: 70vw;
+    }
+    .nav-event-section {
+        width: 70vw;
+    }
+    .nav-news-section {
+        width: 70vw;
+        list-style:none;
+
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: row wrap;
+        align-items: stretch;
+
+        gap: 1rem;
+        height: auto;
+        .nav-news-item{
+            flex: 1 1 40%; /* removes gaps on the sides */
+            width: 45%;
+        }
+    }
 }
 
 
