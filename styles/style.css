@@ -27,17 +27,17 @@ p.tag-style-3 {
     color: rgb(160, 51, 51);
 }
 
-button.button-style-1 {
+label.button-style-1 {
     background-color: rgb(204, 53, 53);
     color: white;
 }
 
-button.button-style-2 {
+label.button-style-2 {
     background-color: rgb(253, 184, 236);
     color: white;
 }
 
-button.button-style-3 {
+label.button-style-3 {
     background-color: rgb(253, 184, 236);
     color: rgb(160, 51, 51);
 }
@@ -143,15 +143,35 @@ button.button-style-3 {
             gap: 0.5rem;
         }
         .reg_button{
+
+            display: inline-flex;
             width: 120px;
-            border: none;
             border-radius: 0.5rem;
-            padding: 0.5rem 1rem;
             cursor: pointer;
+            overflow: hidden;
+        }
+        .reg_button input{
+            display: none;
+        }
+        .reg_button span{
+            text-align: center;
+
+            padding: 0.5rem 1rem;
+
+            width: 100%;
+            height: 100%;
 
             &:hover {
                 background-color: rgb(255, 87, 96);
             }
+        }
+        /* Makes so that the hover color doesn't show up after un-checking the label*/
+        .reg_button input:not(:checked) + span:hover:not(:focus) {
+            background-color: inherit;
+        }
+        .reg_button input:checked + span{
+            background-color: rgb(107, 253, 94);
+            color: rgb(255, 255, 255);
         }
     }
 }
@@ -176,7 +196,7 @@ button.button-style-3 {
         justify-content: left;
 
         gap: 0.5rem;
-        padding: 0.5rem;
+        padding: 1rem;
         border-radius: 0.5rem;
 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -247,6 +267,20 @@ button.button-style-3 {
     }
     .nav-event-section {
         width: 70vw;
+
+        .nav-event-item{
+            position: relative;
+
+            .reg_button{
+                position: absolute;
+                right: 2%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .detail-text{
+                width: 70%;
+            }
+        }
     }
     .nav-news-section {
         width: 70vw;
