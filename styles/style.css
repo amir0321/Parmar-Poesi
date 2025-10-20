@@ -214,10 +214,6 @@ label.button-style-3 {
 
         border: none;
         cursor: pointer;
-
-        &:hover {
-            background-color: rgb(255, 87, 96);
-        }
     }
 
 }
