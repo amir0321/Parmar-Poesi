@@ -5,14 +5,16 @@
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden; /* Prevents horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+  /* Prevents horizontal scroll */
 }
 
 body {
   font-family: "Arial", "Helvetica Neue", sans-serif;
   line-height: 1.6;
-  color: rgb(77, 76, 76);
+  color: #2B2B2B;
 }
 
 .backgrund {
@@ -54,7 +56,7 @@ nav .menu {
   gap: 40px;
 }
 nav .menu li a {
-  color: rgb(77, 76, 76);
+  color: #2B2B2B;
   transition: color 0.3s ease;
 }
 nav .menu li a:hover {
@@ -63,7 +65,7 @@ nav .menu li a:hover {
 nav .menu li a {
   font-weight: bold;
   text-decoration: none;
-  color: rgb(77, 76, 76);
+  color: #2B2B2B;
   transition: color 0.3s ease;
 }
 nav .menu li a:hover {
@@ -121,13 +123,15 @@ main {
 }
 main .main-icon {
   margin: 1.4rem;
-  width: 128px;
-  fill: #F687B3;
+  font-size: 10rem;
+  /* istället för width */
+  color: #F687B3;
+  /* inte fill */
 }
 main h1 {
   margin: 2rem;
   font-size: 3rem;
-  color: rgb(77, 76, 76);
+  color: #2B2B2B;
 }
 main h1 span {
   color: #D64545;
@@ -228,7 +232,8 @@ label.button-style-3 {
   width: auto;
   padding: 1.5rem;
   gap: 1rem;
-  border-radius: 1rem; /* för snyggare skala */
+  border-radius: 1rem;
+  /* för snyggare skala */
   padding-bottom: 5rem;
   margin-top: 40px;
 }
@@ -364,8 +369,88 @@ label.button-style-3 {
   border-radius: 1rem;
 }
 
-/* --------------------------- */
-/* Responsive */
+footer {
+  padding: 2rem;
+  background-color: #0B1420;
+  color: white;
+  font-size: 1.2rem;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 80%;
+}
+footer ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+}
+footer ul li .logo-name {
+  color: #F687B3;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+footer ul li label {
+  display: flex;
+  justify-content: flex-start;
+  width: 250px;
+  margin: 0 auto;
+}
+footer ul li label .icon-button {
+  background-color: #e63946;
+  width: 35px;
+  height: 35px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+footer ul li label .icon-button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: transform 0.3s ease;
+}
+footer ul li label .icon-button:hover {
+  background-color: rgb(209.5426008969, 26.4573991031, 40.2152466368);
+  transform: scale(1.08);
+}
+footer ul li label .icon-button:active {
+  transform: scale(0.95);
+}
+footer ul li label .icon-button:hover svg {
+  transform: rotate(10deg);
+}
+footer ul li label input {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+footer hr {
+  width: 90%;
+  border: none;
+  border-top: 1px solid #A0AEC0;
+  margin: 1rem auto;
+}
+footer .footer-text {
+  color: rgba(255, 255, 255, 0.5607843137);
+  font-size: 0.8rem;
+  text-align: center;
+}
+footer .copyright {
+  color: #A0AEC0;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   nav .menu {
     position: absolute;
@@ -395,8 +480,88 @@ label.button-style-3 {
     width: 100%;
     text-align: center;
   }
+  footer {
+    padding: 3rem 1.5rem;
+    background-color: #0B1420;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer ul li {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.6rem;
+  }
+  footer ul li .logo-name {
+    color: #F687B3;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 0.4rem;
+  }
+  footer ul li p,
+  footer ul li a {
+    color: rgba(255, 255, 255, 0.5607843137);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  footer ul li a:hover {
+    color: #F687B3;
+  }
+  footer ul li label {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  footer ul li label input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  footer ul li label input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    transform: scale(1.01);
+  }
+  footer hr {
+    width: 90%;
+    border: none;
+    border-top: 1px solid #A0AEC0;
+    margin: 1rem auto;
+  }
+  footer .footer-text {
+    color: rgba(255, 255, 255, 0.5607843137);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  footer .copyright {
+    color: #A0AEC0;
+    font-size: 0.75rem;
+    text-align: center;
+  }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) and (min-width: 768px) {
   /* Här kan du lägga till tablet+ desktop-specifika regler */
   .nav-book-section,
   .nav-event-section,
@@ -417,6 +582,9 @@ label.button-style-3 {
   }
   .nav-news-item {
     flex: 1 1 45%;
+  }
+  footer ul {
+    justify-content: space-around;
   }
 }
 

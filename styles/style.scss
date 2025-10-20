@@ -7,8 +7,10 @@
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden; /* Prevents horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+  /* Prevents horizontal scroll */
 }
 
 body {
@@ -113,8 +115,10 @@ main {
 
   .main-icon {
     margin: 1.4rem;
-    width: 128px;
-    fill: #F687B3;
+    font-size: 10rem;
+    /* istället för width */
+    color: #F687B3;
+    /* inte fill */
   }
 
   h1 {
@@ -146,13 +150,35 @@ main {
 
 
 /* Tags */
-p.tag-style-1 { background-color: rgb(204, 53, 53); color: white; }
-p.tag-style-2 { background-color: rgb(253, 184, 236); color: white; }
-p.tag-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51, 51); }
+p.tag-style-1 {
+  background-color: rgb(204, 53, 53);
+  color: white;
+}
 
-label.button-style-1 { background-color: rgb(204, 53, 53); color: white; }
-label.button-style-2 { background-color: rgb(253, 184, 236); color: white; }
-label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51, 51); }
+p.tag-style-2 {
+  background-color: rgb(253, 184, 236);
+  color: white;
+}
+
+p.tag-style-3 {
+  background-color: rgb(253, 184, 236);
+  color: rgb(160, 51, 51);
+}
+
+label.button-style-1 {
+  background-color: rgb(204, 53, 53);
+  color: white;
+}
+
+label.button-style-2 {
+  background-color: rgb(253, 184, 236);
+  color: white;
+}
+
+label.button-style-3 {
+  background-color: rgb(253, 184, 236);
+  color: rgb(160, 51, 51);
+}
 
 /* Book Section 
 .nav-book-section {
@@ -205,7 +231,8 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
   width: auto;
   padding: 1.5rem;
   gap: 1rem;
-  border-radius: 1rem; /* för snyggare skala */
+  border-radius: 1rem;
+  /* för snyggare skala */
   padding-bottom: 5rem;
   margin-top: 40px;
 }
@@ -217,7 +244,7 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  
+
   .nav-event-item {
     display: flex;
     flex-direction: column;
@@ -229,7 +256,7 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .event-icon-wrapper {
@@ -268,7 +295,7 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
         }
       }
 
-      input:checked + span {
+      input:checked+span {
         background-color: rgb(107, 253, 94);
         color: white;
       }
@@ -290,7 +317,7 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
     flex: 1 1 300px; // gör items flexibla med min-bredd
     background-color: #fdf3ed40;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -299,7 +326,7 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
 
     &:hover {
       transform: scale(1.03);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -324,10 +351,28 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
   gap: 1rem;
 }
 
-.content-title { font-size: x-large; font-weight: bold; color: #222; }
-.item-title { font-size: large; font-weight: bold; color: #333; }
-.content-subtitle { font-size: medium; color: #666; }
-.detail-text { font-size: small; color: #555; }
+.content-title {
+  font-size: x-large;
+  font-weight: bold;
+  color: #222;
+}
+
+.item-title {
+  font-size: large;
+  font-weight: bold;
+  color: #333;
+}
+
+.content-subtitle {
+  font-size: medium;
+  color: #666;
+}
+
+.detail-text {
+  font-size: small;
+  color: #555;
+}
+
 .tag {
   display: inline-flex;
   justify-content: center;
@@ -336,8 +381,103 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
   border-radius: 1rem;
 }
 
-/* --------------------------- */
-/* Responsive */
+footer {
+  padding: 2rem;
+  background-color: variablar.$footer-bg;
+  color: white;
+  font-size: 1.2rem;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 80%;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 1rem;
+
+      .logo-name {
+        color: variablar.$footer-accent;
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+      }
+
+      label {
+        display: flex;
+        justify-content: flex-start;
+        width: 250px;
+        margin: 0 auto;
+
+        .icon-button {
+          background-color: #e63946;
+          width: 35px;
+          height: 35px;
+          border-radius: 0 10px 10px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: none;
+          outline: none;
+
+          svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            background-color: darken(#e63946, 10%);
+            transform: scale(1.08);
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+
+          &:hover svg {
+            transform: rotate(10deg);
+          }
+        }
+
+
+        input {
+          width: 100%;
+          background-color: white;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  hr {
+    width: 90%;
+    border: none;
+    border-top: 1px solid variablar.$footer-text-secondary;
+    margin: 1rem auto;
+  }
+
+  .footer-text {
+    color: variablar.$footer-text;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .copyright {
+    color: variablar.$footer-text-secondary;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+
 @media (max-width: 768px) {
   nav {
     .menu {
@@ -351,14 +491,16 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       padding: 10px;
       background: linear-gradient(rgba(255, 248, 240, 0.53), rgba(255, 248, 240, 0.703)),
-           url('/images/main.jpg') center/cover no-repeat;
+        url('/images/main.jpg') center/cover no-repeat;
     }
 
-    #menu-toggle:checked + .menu-icon + .menu {
+    #menu-toggle:checked+.menu-icon+.menu {
       display: flex;
     }
 
-    .menu-icon { display: block; }
+    .menu-icon {
+      display: block;
+    }
   }
 
   .actions-buttons {
@@ -372,33 +514,131 @@ label.button-style-3 { background-color: rgb(253, 184, 236); color: rgb(160, 51,
       text-align: center;
     }
   }
-}
 
-@media (min-width: 768px) {
-  /* Här kan du lägga till tablet+ desktop-specifika regler */
+  footer {
+    padding: 3rem 1.5rem;
+    background-color: variablar.$footer-bg;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 
-  .nav-book-section,
-  .nav-event-section,
-  .nav-news-section {
-    width: 70vw;
-  }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
 
-  .nav-event-item {
-    position: relative;
+      li {
+        flex: 1 1 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.6rem;
 
-    .reg_button {
-      position: absolute;
-      right: 2%;
-      top: 50%;
-      transform: translateY(-50%);
+        .logo-name {
+          color: variablar.$footer-accent;
+          font-size: 1.5rem;
+          font-weight: 600;
+          padding-bottom: 0.4rem;
+        }
+
+        p,
+        a {
+          color: variablar.$footer-text;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+
+        a:hover {
+          color: variablar.$footer-accent;
+        }
+
+        label {
+          width: 100%;
+          margin-top: 0.5rem;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          input {
+            width: 100%;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: none;
+            background-color: #fff;
+            color: #333;
+            font-size: 0.9rem;
+            outline: none;
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+            &:focus {
+              box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+              transform: scale(1.01);
+            }
+          }
+        }
+      }
     }
 
-    .detail-text {
-      width: 70%;
+    hr {
+      width: 90%;
+      border: none;
+      border-top: 1px solid variablar.$footer-text-secondary;
+      margin: 1rem auto;
+    }
+
+    .footer-text {
+      color: variablar.$footer-text;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .copyright {
+      color: variablar.$footer-text-secondary;
+      font-size: 0.75rem;
+      text-align: center;
     }
   }
 
-  .nav-news-item {
-    flex: 1 1 45%;
+  @media (min-width: 768px) {
+
+    /* Här kan du lägga till tablet+ desktop-specifika regler */
+    .nav-book-section,
+    .nav-event-section,
+    .nav-news-section {
+      width: 70vw;
+    }
+
+    .nav-event-item {
+      position: relative;
+
+      .reg_button {
+        position: absolute;
+        right: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .detail-text {
+        width: 70%;
+      }
+    }
+
+    .nav-news-item {
+      flex: 1 1 45%;
+    }
+
+    footer {
+      ul {
+        justify-content: space-around;
+      }
+    }
   }
 }
