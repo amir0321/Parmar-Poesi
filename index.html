@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Pärmar & Poesi</title>
+  </head>
+
+  <body>
+    <section class="backgrund">
+      <header>
+        <section class="header-container">
+          <img
+            src="./images/1.png"
+            alt="Logo som representerar Pärmar & Poesi"
+            class="logo"
+          />
+          <nav>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <ul class="menu">
+              <li><a href="#home">Hem</a></li>
+              <li><a href="#books">Böcker</a></li>
+              <li><a href="#events">Evenemang</a></li>
+              <li><a href="#news">Nyheter</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </ul>
+          </nav>
+        </section>
+      </header>
+
+      <main id="home">
+        <h1>Välkommen till <br /><span>Pärmar & Poesi</span></h1>
+        <p>
+          Din lokala bokhandel där litteraturens magi möter gemenskapens värme.
+          Här hittar du noggrant utvalda böcker, inspirerande evenemang och en
+          plats där ord kommer till liv.
+        </p>
+        <svg viewBox="0 0 24 24" class="main-icon">
+          <path
+            d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"
+          />
+        </svg>
+        <section class="actions-buttons">
+          <button class="book-button">Utforska våra böcker</button>
+          <button class="event-button">Se kommande evenemang</button>
+        </section>
+      </main>
+
+      <article
+        class="justify-center flex-col min-w-screen min-h-screen py-3"
+        id="events"
+      >
+        <!-- Events -->
+        <section class="content-box">
+          <h2 class="content-title">Kommande evenemang</h2>
+          <p class="content-subtitle">
+            Träffa författare, delta i bokklubbar och upplev litteraturens
+            gemenskap
+          </p>
+          <ul class="nav-event-section">
+            <li class="nav-event-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">15 FEB</p>
+                <p class="detail-text">12.00 - 20.00</p>
+              </section>
+              <h3 class="item-title">Författarträff med Anna Lindberg</h3>
+              <p class="detail-text">
+                En inspirerande dag med en av Sveriges mest älskade författare.
+              </p>
+
+              <section class="event-icon-wrapper">
+                <img
+                  class="event-icon"
+                  src="/images/event-icon.png"
+                  alt="Event icon"
+                />
+                <p class="detail-text">I butik</p>
+              </section>
+
+              <label class="reg_button">
+                <input type="checkbox" />
+                <span>Anmäl dig</span>
+              </label>
+            </li>
+
+            <li class="nav-event-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">15 FEB</p>
+                <p class="detail-text">12.00 - 20.00</p>
+              </section>
+              <h3 class="item-title">Bokklubb: Nordisk Noir</h3>
+              <p class="detail-text">
+                Månadens bokklubb fokuserar på nordisk kriminallitteratur.
+              </p>
+
+              <section class="event-icon-wrapper">
+                <img
+                  class="event-icon"
+                  src="/images/event-icon.png"
+                  alt="Event icon"
+                />
+                <p class="detail-text">I butik</p>
+              </section>
+
+              <label class="reg_button">
+                <input type="checkbox" />
+                <span>Anmäl dig</span>
+              </label>
+            </li>
+
+            <li class="nav-event-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">15 FEB</p>
+                <p class="detail-text">12.00 - 20.00</p>
+              </section>
+              <h3 class="item-title">Poesiworkshop för nybörjare</h3>
+              <p class="detail-text">
+                Lär dig grunderna i att skriva poesi i en inspirerande och
+                stödjande miljö.
+              </p>
+
+              <section class="event-icon-wrapper">
+                <img
+                  class="event-icon"
+                  src="/images/event-icon.png"
+                  alt="Event icon"
+                />
+                <p class="detail-text">I butik</p>
+              </section>
+
+              <label class="reg_button">
+                <input type="checkbox" />
+                <span>Anmäl dig</span>
+              </label>
+            </li>
+          </ul>
+        </section>
+
+        <!-- News -->
+        <section class="content-box" id="news">
+          <h2 class="content-title">Nyheter & Boktips</h2>
+          <p class="content-subtitle">
+            Håll dig uppdaterad med de senaste nyheterna från bokvärlden
+          </p>
+
+          <ul class="nav-news-section">
+            <li class="nav-news-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">Nyhet</p>
+                <p class="detail-text">5 februari 2025</p>
+              </section>
+              <h3 class="item-title">Nobelpriset i litteratur 2025</h3>
+              <p class="detail-text">
+                Årets Nobelpris i litteratur har tilldelats den norska
+                författaren Jon Fosse. Vi har nu hans verk i lager och
+                rekommenderar starkt hans senaste trilogi.
+              </p>
+              <button class="read-more">Läs mer →</button>
+            </li>
+
+            <li class="nav-news-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">Booktips</p>
+                <p class="detail-text">8 februari 2025</p>
+              </section>
+              <h3 class="item-title">Veckans boktips: Vintermys</h3>
+              <p class="detail-text">
+                När vintern är som mörkast behöver vi böcker som värmer hjärtat.
+                Här är våra fem bästa tips för mysiga läsupplevelser under
+                februari månad.
+              </p>
+              <button class="read-more">Läs mer →</button>
+            </li>
+
+            <li class="nav-news-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">Evenemang</p>
+                <p class="detail-text">5 februari 2025</p>
+              </section>
+              <h3 class="item-title">Ny bokklubb startar i mars</h3>
+              <p class="detail-text">
+                Vi startar en ny bokklubb fokuserad på kvinnliga författare från
+                hela världen. Första träffen blir 5 mars och vi börjar med
+                Chimamanda Ngozi Adichies "Americanah".
+              </p>
+              <button class="read-more">Läs mer →</button>
+            </li>
+
+            <li class="nav-news-item">
+              <section class="tag-info-wrapper">
+                <p class="tag">Butiken</p>
+                <p class="detail-text">1 februari 2025</p>
+              </section>
+              <h3 class="item-title">Nya öppettider från mars</h3>
+              <p class="detail-text">
+                Från och med mars utökar vi våra öppettider! Vi kommer att vara
+                öppna även på söndagar 12:00 - 16:00 för att ge er ännu fler
+                tillfällen att besöka oss.
+              </p>
+              <button class="read-more">Läs mer →</button>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
