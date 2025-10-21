@@ -41,6 +41,7 @@ header .header-container {
 header .header-container .logo {
   width: 150px;
   margin-left: -25px;
+  cursor: pointer;
 }
 
 /* Navigation */
@@ -232,10 +233,8 @@ label.button-style-3 {
   width: auto;
   padding: 1.5rem;
   gap: 1rem;
-  border-radius: 1rem;
-  /* för snyggare skala */
-  padding-bottom: 5rem;
-  margin-top: 40px;
+  padding-bottom: 3rem;
+  margin-top: 30px;
 }
 
 /* Event Section */
@@ -252,7 +251,7 @@ label.button-style-3 {
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.225);
+  background-color: rgba(167, 103, 30, 0.4784313725);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .nav-event-section .nav-event-item:hover {
@@ -306,7 +305,7 @@ label.button-style-3 {
 }
 .nav-news-section .nav-news-item {
   flex: 1 1 300px;
-  background-color: rgba(253, 243, 237, 0.2509803922);
+  background-color: rgba(167, 103, 30, 0.4784313725);
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -369,6 +368,54 @@ label.button-style-3 {
   border-radius: 1rem;
 }
 
+.kontakt-section {
+  padding: 3em 1em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 3rem;
+}
+.kontakt-section h2 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+.kontakt-section ul {
+  list-style: none;
+  padding: 0 1rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.kontakt-section ul li {
+  text-align: left;
+  padding: 1em 0 2em;
+  border-top: 3px solid rgba(167, 103, 30, 0.4784313725);
+}
+.kontakt-section ul li h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+.kontakt-section ul li p {
+  margin-bottom: 0.8em;
+  color: #333;
+  line-height: 1.5;
+}
+.kontakt-section ul li .kontakt-icons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.kontakt-section ul li .kontakt-icons i {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: x-large;
+}
+.kontakt-section ul li .kontakt-icons i:hover {
+  cursor: pointer;
+}
+
 footer {
   padding: 2rem;
   background-color: #0B1420;
@@ -394,11 +441,15 @@ footer ul li .logo-name {
   font-size: 1.4rem;
   padding-bottom: 10px;
 }
+footer ul li .footer-icons i {
+  cursor: pointer;
+}
 footer ul li label {
   display: flex;
   justify-content: flex-start;
-  width: 250px;
+  width: 275px;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 footer ul li label .icon-button {
   background-color: #e63946;
@@ -413,26 +464,29 @@ footer ul li label .icon-button {
   border: none;
   outline: none;
 }
-footer ul li label .icon-button svg {
+footer ul li label .icon-button i {
   width: 18px;
   height: 18px;
   fill: white;
   transition: transform 0.3s ease;
 }
 footer ul li label .icon-button:hover {
-  background-color: rgb(209.5426008969, 26.4573991031, 40.2152466368);
+  background-color: rgba(255, 0, 21, 0.5058823529);
   transform: scale(1.08);
 }
 footer ul li label .icon-button:active {
   transform: scale(0.95);
 }
-footer ul li label .icon-button:hover svg {
+footer ul li label .icon-button:hover i {
   transform: rotate(10deg);
 }
 footer ul li label input {
   width: 100%;
-  background-color: white;
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.653);
+  color: rgba(0, 0, 0, 0.883);
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  font-size: medium;
 }
 footer hr {
   width: 90%;
@@ -443,7 +497,6 @@ footer hr {
 footer .footer-text {
   color: rgba(255, 255, 255, 0.5607843137);
   font-size: 0.8rem;
-  text-align: center;
 }
 footer .copyright {
   color: #A0AEC0;

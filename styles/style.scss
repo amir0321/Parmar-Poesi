@@ -40,6 +40,7 @@ header {
     .logo {
       width: 150px;
       margin-left: -25px;
+      cursor: pointer;
     }
   }
 }
@@ -231,10 +232,8 @@ label.button-style-3 {
   width: auto;
   padding: 1.5rem;
   gap: 1rem;
-  border-radius: 1rem;
-  /* för snyggare skala */
-  padding-bottom: 5rem;
-  margin-top: 40px;
+  padding-bottom: 3rem;
+  margin-top: 30px;
 }
 
 /* Event Section */
@@ -251,7 +250,7 @@ label.button-style-3 {
     gap: 0.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.225);
+    background-color: #a7671e7a;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
@@ -315,7 +314,7 @@ label.button-style-3 {
 
   .nav-news-item {
     flex: 1 1 300px; // gör items flexibla med min-bredd
-    background-color: #fdf3ed40;
+    background-color: #a7671e7a;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -381,6 +380,64 @@ label.button-style-3 {
   border-radius: 1rem;
 }
 
+.kontakt-section {
+  padding: 3em 1em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 3rem;
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 1rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    li {
+      text-align: left;
+      padding: 1em 0 2em;
+      border-top: 3px solid #a7671e7a;
+
+      h3 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        margin-bottom: 0.8em;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .kontakt-icons {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+
+        i {
+          font-weight: bold;
+          color: #000;
+          text-decoration: none;
+          font-size: x-large;
+        }
+
+        i:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
 footer {
   padding: 2rem;
   background-color: variablar.$footer-bg;
@@ -407,11 +464,16 @@ footer {
         padding-bottom: 10px;
       }
 
+      .footer-icons i {
+        cursor: pointer;
+      }
+
       label {
         display: flex;
         justify-content: flex-start;
-        width: 250px;
+        width: 275px;
         margin: 0 auto;
+        margin-top: 1rem;
 
         .icon-button {
           background-color: #e63946;
@@ -426,7 +488,7 @@ footer {
           border: none;
           outline: none;
 
-          svg {
+          i {
             width: 18px;
             height: 18px;
             fill: white;
@@ -434,7 +496,7 @@ footer {
           }
 
           &:hover {
-            background-color: darken(#e63946, 10%);
+            background-color: #ff001581;
             transform: scale(1.08);
           }
 
@@ -442,7 +504,7 @@ footer {
             transform: scale(0.95);
           }
 
-          &:hover svg {
+          &:hover i {
             transform: rotate(10deg);
           }
         }
@@ -450,8 +512,11 @@ footer {
 
         input {
           width: 100%;
-          background-color: white;
-          border-radius: 10px;
+          background-color: rgba(255, 255, 255, 0.653);
+          color: rgba(0, 0, 0, 0.883);
+          border-radius: 10px 0 0 10px;
+          text-align: center;
+          font-size: medium;
         }
       }
     }
@@ -467,7 +532,7 @@ footer {
   .footer-text {
     color: variablar.$footer-text;
     font-size: 0.8rem;
-    text-align: center;
+
   }
 
   .copyright {
