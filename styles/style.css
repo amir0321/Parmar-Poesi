@@ -1,312 +1,4 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Prevents horizontal scroll */
-}
-
-.content-box:nth-child(odd){
-    background-color: white;
-}
-.content-box:nth-child(even){
-    background-color: rgb(245, 245, 245);
-}
-
-p.tag-style-1 {
-    background-color: rgb(204, 53, 53);
-    color: white;
-}
-
-p.tag-style-2 {
-    background-color: rgb(253, 184, 236);
-    color: white;
-}
-
-p.tag-style-3 {
-    background-color: rgb(253, 184, 236);
-    color: rgb(160, 51, 51);
-}
-
-label.button-style-1 {
-    background-color: rgb(204, 53, 53);
-    color: white;
-}
-
-label.button-style-2 {
-    background-color: rgb(253, 184, 236);
-    color: white;
-}
-
-label.button-style-3 {
-    background-color: rgb(253, 184, 236);
-    color: rgb(160, 51, 51);
-}
-
-/* Has elements like title, text and the showcase, displayed in column */
-.content-box{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width:auto;
-    height:auto;
-
-    padding: 1.5rem;
-    gap: 1rem;
-}
-
-/* Has navigation elements*/
-.nav-book-section{
-  list-style:none;
-
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-
-  gap: 2rem;
-
-  width: 100%;
-  gap: 0.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  background-color: rgb(253, 243, 237);
-}
-
-.nav-book-item{
-  list-style:none;
-    display: flex;
-    flex-direction: column;
-
-    width: 20rem;
-    min-height: 15rem;
-
-    overflow: hidden;
-    border-radius: 0.5rem;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    .nav-book-item-box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        min-height: 50%;
-
-        background-color: rgb(255, 180, 242);
-
-        .book-icon {
-            object-fit: cover;
-            width: 10%;
-
-        }
-
-    }
-}
-
-.nav-event-section{
-    list-style:none;
-
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-
-    gap: 1rem;
-
-    width: 100%;
-    height: auto;
-
-    .nav-event-item{
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-
-        background-color: rgb(255, 255, 255);
-
-        .event-icon-wrapper{
-            display:flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-
-            .event-icon {
-                object-fit: fit;
-                width: 20px;
-                height: 20px;
-
-            }
-        }
-
-        .event-icon-wrapper {
-          gap: 0.5rem;
-        }
-
-        .reg_button{
-
-            display: inline-flex;
-            width: 120px;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            overflow: hidden;
-        }
-        .reg_button input{
-            display: none;
-        }
-        .reg_button span{
-            text-align: center;
-
-            padding: 0.5rem 1rem;
-
-            width: 100%;
-            height: 100%;
-
-            &:hover {
-                background-color: rgb(255, 87, 96);
-            }
-        }
-        /* Makes so that the hover color doesn't show up after un-checking the label*/
-        .reg_button input:not(:checked) + span:hover:not(:focus) {
-            background-color: inherit;
-        }
-        .reg_button input:checked + span{
-            background-color: rgb(107, 253, 94);
-            color: rgb(255, 255, 255);
-        }
-    }
-}
-
-.nav-news-section{
-    list-style:none;
-
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-items: stretch;
-
-    gap: 1rem;
-
-    width: 100%;
-    height: auto;
-
-    .nav-news-item{
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-
-        gap: 0.5rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
-
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-        background-color: rgb(253, 243, 237);
-    }
-
-    button.read-more{
-        display: flex;
-        justify-content: left;
-
-        color: rgb(160, 51, 51);
-
-        width: 50%;
-
-        border: none;
-        cursor: pointer;
-    }
-}
-
-.tag-info-wrapper {
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-}
-
-.content-title {
-    font-size: x-large;
-    font-weight: bold;
-    color: #222;
-}
-
-.item-title {
-    font-size: large;
-    font-weight: bold;
-    color: #333;
-}
-
-.content-subtitle {
-    font-size: medium;
-    color: #666;
-}
-
-.detail-text {
-    font-size: small;
-    color: #555;
-}
-
-.tag {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0.25rem 0.5rem;
-    border-radius: 1rem;
-}
-
-@media (min-width: 768px) {
-
-    .nav-book-section {
-      width: 70vw;
-      flex-direction: column;
-      flex-flow: row wrap;
-
-    }
-    .nav-event-section {
-        width: 70vw;
-
-        .nav-event-item{
-            position: relative;
-
-            .reg_button{
-                position: absolute;
-                right: 2%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .detail-text{
-                width: 70%;
-            }
-        }
-    }
-    .nav-news-section {
-        width: 70vw;
-        list-style:none;
-
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-flow: row wrap;
-        align-items: stretch;
-
-        gap: 1rem;
-        height: auto;
-        .nav-news-item{
-            flex: 1 1 40%; /* removes gaps on the sides */
-            width: 45%;
-        }
-    }
-}
-
-
-
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -329,11 +21,10 @@ body {
   background: linear-gradient(rgba(255, 248, 240, 0.18), rgba(255, 248, 240, 0.679)), url("/images/main.jpg") center/cover no-repeat;
 }
 
+/* Header */
 header {
-  position: sticky;
-  top: 0;
   z-index: 1000;
-  padding: 0 40px;
+  padding: 0 30px;
 }
 header .header-container {
   display: flex;
@@ -344,8 +35,6 @@ header .header-container {
   margin: 0 auto;
   width: 100%;
   gap: 40px;
-
-
   position: sticky;
   top: 0;
 }
@@ -355,6 +44,7 @@ header .header-container .logo {
   cursor: pointer;
 }
 
+/* Navigation */
 nav {
   position: relative;
 }
@@ -365,7 +55,6 @@ nav .menu {
   justify-content: flex-start;
   align-items: center;
   gap: 40px;
-  margin-bottom: 10px;
 }
 nav .menu li a {
   color: #2B2B2B;
@@ -385,14 +74,15 @@ nav .menu li a:hover {
 }
 nav .menu-icon {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 nav #menu-toggle {
   display: none;
 }
 
+/* Buttons */
 .book-button,
 .event-button {
   color: white;
@@ -426,19 +116,18 @@ nav #menu-toggle {
   color: #fff;
 }
 
+/* Main */
 main {
   padding: 0rem 2rem;
-  min-height: 90vh;
+  min-height: 80vh;
   text-align: center;
 }
 main .main-icon {
   margin: 1.4rem;
-
   font-size: 10rem;
   /* istället för width */
   color: #F687B3;
   /* inte fill */
-
 }
 main h1 {
   margin: 2rem;
@@ -496,7 +185,7 @@ label.button-style-3 {
   color: rgb(160, 51, 51);
 }
 
-/* Book Section 
+/* Book Section */
 .nav-book-section {
   list-style: none;
   display: flex;
@@ -515,27 +204,23 @@ label.button-style-3 {
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  }
-
-  .nav-book-item-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 50%;
-    background-color: rgb(255, 180, 242);
-
-    .book-icon {
-      object-fit: cover;
-      width: 10%;
-    }
-  }
 }
-*/
+.nav-book-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.nav-book-item .nav-book-item-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50%;
+  background-color: rgb(255, 180, 242);
+}
+.nav-book-item .nav-book-item-box .book-icon {
+  object-fit: cover;
+  width: 10%;
+}
 
 /* Layout Boxes */
 .content-box {
@@ -836,7 +521,6 @@ footer .copyright {
     display: block;
   }
   .actions-buttons {
-    display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
@@ -927,7 +611,6 @@ footer .copyright {
     text-align: center;
   }
 }
-
 @media (max-width: 768px) and (min-width: 768px) {
   /* Här kan du lägga till tablet+ desktop-specifika regler */
   .nav-book-section,
