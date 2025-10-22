@@ -18,7 +18,7 @@ body {
 }
 
 .backgrund {
-  background: linear-gradient(rgba(255, 248, 240, 0.18), rgba(255, 248, 240, 0.679)), url("/images/main.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(255, 248, 240, 0.147), rgba(255, 248, 240, 0.384)), url("/images/main.jpg") center/cover no-repeat;
 }
 
 /* Header */
@@ -212,7 +212,7 @@ p.tag-style-3 {
   align-items: flex-start;
   padding: 1rem;
   height: 100%;
-  background-color: rgba(167, 103, 30, 0.4784313725);
+  background-color: rgba(167, 103, 30, 0.6901960784);
 }
 .nav-book-section .nav-book-item-box {
   display: flex;
@@ -256,7 +256,7 @@ p.tag-style-3 {
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: rgba(167, 103, 30, 0.4784313725);
+  background-color: rgba(167, 103, 30, 0.6901960784);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .nav-event-section .nav-event-item:hover {
@@ -375,7 +375,7 @@ p.tag-style-3 {
 }
 .nav-news-section .nav-news-item {
   flex: 1 1 300px;
-  background-color: rgba(167, 103, 30, 0.4784313725);
+  background-color: rgba(167, 103, 30, 0.6901960784);
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
