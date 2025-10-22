@@ -152,31 +152,22 @@ main {
 
 /* Tags */
 p.tag-style-1 {
+  @include tag;
+
   background-color: rgb(204, 53, 53);
   color: white;
 }
 
 p.tag-style-2 {
+  @include tag;
+
   background-color: rgb(253, 184, 236);
   color: white;
 }
 
 p.tag-style-3 {
-  background-color: rgb(253, 184, 236);
-  color: rgb(160, 51, 51);
-}
+  @include tag;
 
-label.button-style-1 {
-  background-color: rgb(204, 53, 53);
-  color: white;
-}
-
-label.button-style-2 {
-  background-color: rgb(253, 184, 236);
-  color: white;
-}
-
-label.button-style-3 {
   background-color: rgb(253, 184, 236);
   color: rgb(160, 51, 51);
 }
@@ -236,8 +227,6 @@ label.button-style-3 {
   }
 }
 
-
-
 /* Layout Boxes */
 .content-box {
   display: flex;
@@ -272,7 +261,7 @@ label.button-style-3 {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .event-icon-wrapper {
+    .event-icon-wrapper{
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -283,39 +272,26 @@ label.button-style-3 {
         height: 20px;
       }
     }
-
-    .reg_button {
-      display: inline-flex;
-      width: 120px;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      overflow: hidden;
-      margin-top: 0.5rem;
-
-      input {
-        display: none;
-      }
-
-      span {
-        text-align: center;
-        padding: 0.5rem 1rem;
-        width: 100%;
-        height: 100%;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: rgb(255, 87, 96);
-        }
-      }
-
-      input:checked+span {
-        background-color: rgb(107, 253, 94);
-        color: white;
-      }
-    }
   }
 }
 
+.button-style-1 {
+  @include reg-button;
+  background-color: rgb(204, 53, 53);
+  color: white;
+}
+
+.button-style-2 {
+  @include reg-button;
+  background-color: rgb(253, 184, 236);
+  color: white;
+}
+
+.button-style-3 {
+  @include reg-button;
+  background-color: rgb(253, 184, 236);
+  color: rgb(160, 51, 51);
+}
 
 /* News Section */
 .nav-news-section {
@@ -383,7 +359,7 @@ label.button-style-3 {
 
 .detail-text {
   font-size: small;
-  color: #555;
+  color: #2b2b2b;
 }
 
 .tag {
@@ -662,35 +638,34 @@ footer {
 
 @media (min-width: 768px) {
 
-    /* Här kan du lägga till tablet+ desktop-specifika regler */
-    .nav-book-section,
-    .nav-event-section,
-    .nav-news-section {
-      width: 80vw;
+  /* Här kan du lägga till tablet+ desktop-specifika regler */
+  .nav-book-section,
+  .nav-event-section,
+  .nav-news-section {
+    width: 80vw;
+  }
+
+  .nav-event-item {
+    position: relative;
+
+    .detail-text {
+      width: 70%;
     }
-
-    .nav-event-item {
-      position: relative;
-
-      .reg_button {
-        position: absolute;
-        right: 2%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .detail-text {
-        width: 70%;
-      }
-    }
-
-    .nav-news-item {
-      flex: 1 1 45%;
-    }
-
-    footer {
-      ul {
-        justify-content: space-around;
-      }
+    .button-style-1, .button-style-2, .button-style-3 {
+      position: absolute;
+      right: 2%;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
+
+  .nav-news-item {
+    flex: 1 1 45%;
+  }
+
+  footer {
+    ul {
+      justify-content: space-around;
+    }
+  }
+}
