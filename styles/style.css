@@ -26,7 +26,7 @@ header {
   z-index: 1000;
   padding: 0 30px;
 }
-header .header-container {
+header .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,7 +38,7 @@ header .header-container {
   position: sticky;
   top: 0;
 }
-header .header-container .logo {
+header .container .logo {
   width: 150px;
   margin-left: -25px;
   cursor: pointer;
@@ -118,7 +118,7 @@ nav #menu-toggle {
 
 /* Main */
 main {
-  padding: 0rem 2rem;
+  padding: 1rem 2rem 4rem;
   min-height: 80vh;
   text-align: center;
 }
@@ -185,7 +185,7 @@ label.button-style-3 {
   color: rgb(160, 51, 51);
 }
 
-/* Book Section */
+/* Books */
 .nav-book-section {
   list-style: none;
   display: flex;
@@ -194,24 +194,21 @@ label.button-style-3 {
   gap: 2rem;
   width: 100%;
 }
-
-.nav-book-item {
+.nav-book-section .nav-book-item {
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  width: 23rem;
   height: 20rem;
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.nav-book-item:hover {
-  transform: scale(1.03);
+.nav-book-section .nav-book-item:hover {
+  transform: scale(1.02);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.nav-book-info-wrapper {
+.nav-book-section .nav-book-info-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -220,19 +217,20 @@ label.button-style-3 {
   height: 100%;
   background-color: rgba(167, 103, 30, 0.4784313725);
 }
-
-.nav-book-item .nav-book-item-box {
+.nav-book-section .nav-book-item-box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 55%;
-  background-color: rgb(253, 184, 236);
+  background-color: rgba(249, 158, 226, 0.6);
 }
-
-.nav-book-item .nav-book-item-box .book-icon {
+.nav-book-section .nav-book-item .nav-book-item-box .book-icon {
   object-fit: cover;
   width: 25%;
+}
+.nav-book-section .nav-book-item:nth-child(2) .nav-book-item-box {
+  background-color: rgba(229, 47, 47, 0.627);
 }
 
 /* Layout Boxes */
@@ -378,6 +376,7 @@ label.button-style-3 {
   border-radius: 1rem;
 }
 
+/* contact */
 .kontakt-section {
   padding: 3em 1em;
   font-family: Arial, sans-serif;
@@ -461,6 +460,14 @@ footer ul li label {
   margin: 0 auto;
   margin-top: 1rem;
 }
+footer ul li label input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.653);
+  color: rgba(0, 0, 0, 0.883);
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  font-size: medium;
+}
 footer ul li label .icon-button {
   background-color: #e63946;
   width: 35px;
@@ -489,14 +496,6 @@ footer ul li label .icon-button:active {
 }
 footer ul li label .icon-button:hover i {
   transform: rotate(10deg);
-}
-footer ul li label input {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.653);
-  color: rgba(0, 0, 0, 0.883);
-  border-radius: 10px 0 0 10px;
-  text-align: center;
-  font-size: medium;
 }
 footer hr {
   width: 90%;
@@ -545,8 +544,6 @@ footer .copyright {
   }
   footer {
     padding: 3rem 1.5rem;
-    background-color: #0B1420;
-    color: white;
     font-size: 1.1rem;
     display: flex;
     flex-direction: column;
@@ -554,24 +551,18 @@ footer .copyright {
     gap: 2rem;
   }
   footer ul {
-    display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1100px;
     width: 100%;
-    margin: 0 auto;
   }
   footer ul li {
     flex: 1 1 250px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 0.6rem;
+    padding: 0;
   }
   footer ul li .logo-name {
-    color: #F687B3;
     font-size: 1.5rem;
     font-weight: 600;
     padding-bottom: 0.4rem;
@@ -588,12 +579,10 @@ footer .copyright {
   footer ul li label {
     width: 100%;
     margin-top: 0.5rem;
-    display: flex;
     align-items: center;
     position: relative;
   }
   footer ul li label input {
-    width: 100%;
     padding: 0.6rem 1rem;
     border-radius: 8px;
     border: none;
@@ -607,29 +596,13 @@ footer .copyright {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
     transform: scale(1.01);
   }
-  footer hr {
-    width: 90%;
-    border: none;
-    border-top: 1px solid #A0AEC0;
-    margin: 1rem auto;
-  }
-  footer .footer-text {
-    color: rgba(255, 255, 255, 0.5607843137);
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  footer .copyright {
-    color: #A0AEC0;
-    font-size: 0.75rem;
-    text-align: center;
-  }
 }
-@media (max-width: 768px) and (min-width: 768px) {
+@media (min-width: 768px) {
   /* Här kan du lägga till tablet+ desktop-specifika regler */
   .nav-book-section,
   .nav-event-section,
   .nav-news-section {
-    width: 70vw;
+    width: 80vw;
   }
   .nav-event-item {
     position: relative;

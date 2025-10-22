@@ -28,7 +28,7 @@ header {
   z-index: 1000;
   padding: 0 30px;
 
-  .header-container {
+  .container {
     @include flex-center(row, space-between, center);
     max-width: 1200px;
     margin: 0 auto;
@@ -110,7 +110,7 @@ nav {
 
 /* Main */
 main {
-  padding: 0rem 2rem;
+  padding: 1rem 2rem 4rem;
   min-height: 80vh;
   text-align: center;
 
@@ -182,8 +182,7 @@ label.button-style-3 {
 }
 
 
-
-/* Book Section */
+/* Books */
 .nav-book-section {
   list-style: none;
   display: flex;
@@ -191,44 +190,50 @@ label.button-style-3 {
   justify-content: center;
   gap: 2rem;
   width: 100%;
-}
 
-.nav-book-item {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-  height: 20rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.nav-book-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.nav-book-info-wrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 1rem;
+  .nav-book-item {
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  height: 100%;
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
 
-  background-color: #a7671e7a;
-}
-.nav-book-item .nav-book-item-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 55%;
-  background-color:rgb(253, 184, 236);
-}
-.nav-book-item .nav-book-item-box .book-icon {
-  object-fit: cover;
-  width: 25%;
+  .nav-book-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    height: 100%;
+    background-color: variablar.$element-background-color;
+  }
+
+  .nav-book-item-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 55%;
+    background-color: rgba(249, 158, 226, 0.6);
+  }
+
+  .nav-book-item .nav-book-item-box .book-icon {
+    object-fit: cover;
+    width: 25%;
+  }
+
+  .nav-book-item:nth-child(2) .nav-book-item-box {
+    background-color: rgba(229, 47, 47, 0.627);
+  }
 }
 
 
@@ -259,7 +264,7 @@ label.button-style-3 {
     gap: 0.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: #a7671e7a;
+    background-color: variablar.$element-background-color;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
@@ -323,7 +328,7 @@ label.button-style-3 {
 
   .nav-news-item {
     flex: 1 1 300px; // gör items flexibla med min-bredd
-    background-color: #a7671e7a;
+    background-color: variablar.$element-background-color;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -389,6 +394,7 @@ label.button-style-3 {
   border-radius: 1rem;
 }
 
+/* contact */
 .kontakt-section {
   padding: 3em 1em;
   font-family: Arial, sans-serif;
@@ -484,6 +490,15 @@ footer {
         margin: 0 auto;
         margin-top: 1rem;
 
+        input {
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0.653);
+          color: rgba(0, 0, 0, 0.883);
+          border-radius: 10px 0 0 10px;
+          text-align: center;
+          font-size: medium;
+        }
+
         .icon-button {
           background-color: #e63946;
           width: 35px;
@@ -516,16 +531,6 @@ footer {
           &:hover i {
             transform: rotate(10deg);
           }
-        }
-
-
-        input {
-          width: 100%;
-          background-color: rgba(255, 255, 255, 0.653);
-          color: rgba(0, 0, 0, 0.883);
-          border-radius: 10px 0 0 10px;
-          text-align: center;
-          font-size: medium;
         }
       }
     }
@@ -591,8 +596,6 @@ footer {
 
   footer {
     padding: 3rem 1.5rem;
-    background-color: variablar.$footer-bg;
-    color: white;
     font-size: 1.1rem;
     display: flex;
     flex-direction: column;
@@ -600,24 +603,18 @@ footer {
     gap: 2rem;
 
     ul {
-      display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       gap: 2rem;
-      max-width: 1100px;
       width: 100%;
-      margin: 0 auto;
 
       li {
         flex: 1 1 250px;
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
         text-align: left;
         gap: 0.6rem;
+        padding: 0;
 
         .logo-name {
-          color: variablar.$footer-accent;
           font-size: 1.5rem;
           font-weight: 600;
           padding-bottom: 0.4rem;
@@ -637,12 +634,10 @@ footer {
         label {
           width: 100%;
           margin-top: 0.5rem;
-          display: flex;
           align-items: center;
           position: relative;
 
           input {
-            width: 100%;
             padding: 0.6rem 1rem;
             border-radius: 8px;
             border: none;
@@ -660,34 +655,18 @@ footer {
         }
       }
     }
-
-    hr {
-      width: 90%;
-      border: none;
-      border-top: 1px solid variablar.$footer-text-secondary;
-      margin: 1rem auto;
-    }
-
-    .footer-text {
-      color: variablar.$footer-text;
-      font-size: 0.8rem;
-      text-align: center;
-    }
-
-    .copyright {
-      color: variablar.$footer-text-secondary;
-      font-size: 0.75rem;
-      text-align: center;
-    }
   }
 
-  @media (min-width: 768px) {
+  
+}
+
+@media (min-width: 768px) {
 
     /* Här kan du lägga till tablet+ desktop-specifika regler */
     .nav-book-section,
     .nav-event-section,
     .nav-news-section {
-      width: 70vw;
+      width: 80vw;
     }
 
     .nav-event-item {
@@ -715,4 +694,3 @@ footer {
       }
     }
   }
-}

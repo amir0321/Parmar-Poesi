@@ -15,7 +15,7 @@
   <body>
     <section class="backgrund">
       <header>
-        <section class="header-container">
+        <section class="container">
           <img
             src="./images/1.png"
             alt="Logo som representerar Pärmar & Poesi"
@@ -48,6 +48,50 @@
           <button class="event-button">Se kommande evenemang</button>
         </section>
       </main>
+
+      <section class="content-box" id="books">
+        <h2 class="content-title">Utvalda böcker</h2>
+        <p class="content-subtitle">
+          Handplockat av oss med kärlek för literatur och poesi
+        </p>
+        <ul class="nav-book-section">
+          <li class="nav-book-item">
+            <section class="nav-book-item-box">
+              <img class="book-icon" src="/images/book.png" alt="Book icon" />
+            </section>
+
+            <section class="nav-book-info-wrapper">
+              <h3 class="item-title">Nordisk Poesi</h3>
+              <p class="detail-text">En samling av nordiska poeter</p>
+              <p class="tag">Poesi</p>
+            </section>
+          </li>
+          <li class="nav-book-item">
+            <section class="nav-book-item-box">
+              <img class="book-icon" src="/images/book.png" alt="Book icon" />
+            </section>
+
+            <section class="nav-book-info-wrapper">
+              <h3 class="item-title">Moderna Klassiker</h3>
+              <p class="detail-text">
+                Tidlösa berättelser som formar vår tids literatur.
+              </p>
+              <p class="tag">Klassiker</p>
+            </section>
+          </li>
+          <li class="nav-book-item">
+            <section class="nav-book-item-box">
+              <img class="book-icon" src="/images/book.png" alt="Book icon" />
+            </section>
+
+            <section class="nav-book-info-wrapper">
+              <h3 class="item-title">Lokala Författare</h3>
+              <p class="detail-text">Upptäck talanger från får egen region.</p>
+              <p class="tag">Lokalt</p>
+            </section>
+          </li>
+        </ul>
+      </section>
 
       <article
         class="justify-center flex-col min-w-screen min-h-screen py-3"
@@ -310,9 +354,9 @@
           <p class="footer-text">
             Få de senaste nyheterna och boktipsen direkt i din inkorg.
           </p>
-          <label for="">
+          <label>
             <input type="email" placeholder="Din e-post" />
-            <button type="submit">
+            <button type="button">
               <i class="fa-solid fa-paper-plane icon-button"></i>
             </button>
           </label>
