@@ -12,274 +12,271 @@
     <title>Pärmar & Poesi</title>
   </head>
 
-  <body>
-    <section class="backgrund">
-      <header>
-        <section class="container">
-          <img
-            src="./images/1.png"
-            alt="Logo som representerar Pärmar & Poesi"
-            class="logo"
-          />
-          <nav>
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">☰</label>
-            <ul class="menu">
-              <li><a href="#home">Hem</a></li>
-              <li><a href="#books">Böcker</a></li>
-              <li><a href="#events">Evenemang</a></li>
-              <li><a href="#news">Nyheter</a></li>
-              <li><a href="#contact">Kontakt</a></li>
-            </ul>
-          </nav>
-        </section>
-      </header>
-
-      <!--main-->
-      <main id="home">
-        <h1>Välkommen till <br /><span>Pärmar & Poesi</span></h1>
-        <p>
-          Din lokala bokhandel där litteraturens magi möter gemenskapens värme.
-          Här hittar du noggrant utvalda böcker, inspirerande evenemang och en
-          plats där ord kommer till liv.
-        </p>
-        <i class="fa-solid fa-book-open main-icon"></i>
-        <section class="actions-buttons">
-          <button class="book-button">Utforska våra böcker</button>
-          <button class="event-button">Se kommande evenemang</button>
-        </section>
-      </main>
-
-      <!--books-->
-      <section class="content-box" id="books">
-        <h2 class="content-title">Utvalda böcker</h2>
-        <p class="content-subtitle">
-          Handplockat av oss med kärlek för literatur och poesi
-        </p>
-        <ul class="nav-book-section">
-          <li class="nav-book-item">
-            <section class="nav-book-item-box">
-              <img class="book-icon" src="/images/book.png" alt="Book icon" />
-            </section>
-
-            <section class="nav-book-info-wrapper">
-              <h3 class="item-title">Nordisk Poesi</h3>
-              <p class="detail-text">En samling av nordiska poeter</p>
-              <p class="tag button-style-1">Poesi</p>
-            </section>
-          </li>
-          <li class="nav-book-item">
-            <section class="nav-book-item-box">
-              <img class="book-icon" src="/images/book.png" alt="Book icon" />
-            </section>
-
-            <section class="nav-book-info-wrapper">
-              <h3 class="item-title">Moderna Klassiker</h3>
-              <p class="detail-text">
-                Tidlösa berättelser som formar vår tids literatur.
-              </p>
-              <p class="tag button-style-2">Klassiker</p>
-            </section>
-          </li>
-          <li class="nav-book-item">
-            <section class="nav-book-item-box">
-              <img class="book-icon" src="/images/book.png" alt="Book icon" />
-            </section>
-
-            <section class="nav-book-info-wrapper">
-              <h3 class="item-title">Lokala Författare</h3>
-              <p class="detail-text">Upptäck talanger från får egen region.</p>
-              <p class="tag button-style-3">Lokalt</p>
-            </section>
-          </li>
-        </ul>
+  <body class="backgrund">
+    <header>
+      <section class="container">
+        <img
+          src="./images/1.png"
+          alt="Logo som representerar Pärmar & Poesi"
+          class="logo"
+        />
+        <nav>
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">☰</label>
+          <ul class="menu">
+            <li><a href="#home">Hem</a></li>
+            <li><a href="#books">Böcker</a></li>
+            <li><a href="#events">Evenemang</a></li>
+            <li><a href="#news">Nyheter</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
       </section>
+    </header>
 
-      <article
-        class="justify-center flex-col min-w-screen min-h-screen py-3"
-        id="events"
-      >
-        <!-- Events -->
-        <section class="content-box">
-          <h2 class="content-title">Kommande evenemang</h2>
-          <p class="content-subtitle">
-            Träffa författare, delta i bokklubbar och upplev litteraturens
-            gemenskap
-          </p>
-          <ul class="nav-event-section">
-            <li class="nav-event-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-1">15 FEB</p>
-                <p class="detail-text">12.00 - 20.00</p>
-              </section>
-              <h3 class="item-title">Författarträff med Anna Lindberg</h3>
-              <p class="detail-text">
-                En inspirerande dag med en av Sveriges mest älskade författare.
-              </p>
+    <!--main-->
+    <main id="home">
+      <h1>Välkommen till <br /><span>Pärmar & Poesi</span></h1>
+      <p>
+        Din lokala bokhandel där litteraturens magi möter gemenskapens värme.
+        Här hittar du noggrant utvalda böcker, inspirerande evenemang och en
+        plats där ord kommer till liv.
+      </p>
+      <i class="fa-solid fa-book-open main-icon"></i>
+      <section class="actions-buttons">
+        <button class="book-button">Utforska våra böcker</button>
+        <button class="event-button">Se kommande evenemang</button>
+      </section>
+    </main>
 
-              <section class="event-icon-wrapper">
-                <img
-                  class="event-icon"
-                  src="/images/event-icon.png"
-                  alt="Event icon"
-                />
-                <p class="detail-text">I butik</p>
-              </section>
+    <!--books-->
+    <section class="content-box" id="books">
+      <h2 class="content-title">Utvalda böcker</h2>
+      <p class="content-subtitle">
+        Handplockat av oss med kärlek för literatur och poesi
+      </p>
+      <ul class="nav-book-section">
+        <li class="nav-book-item">
+          <section class="nav-book-item-box">
+            <img class="book-icon" src="/images/book.png" alt="Book icon" />
+          </section>
 
-              <label class="button-style-1">
-                <input type="checkbox" />
-                <span>Anmäl dig</span>
-              </label>
-            </li>
+          <section class="nav-book-info-wrapper">
+            <h3 class="item-title">Nordisk Poesi</h3>
+            <p class="detail-text">En samling av nordiska poeter</p>
+            <p class="tag button-style-1">Poesi</p>
+          </section>
+        </li>
+        <li class="nav-book-item">
+          <section class="nav-book-item-box">
+            <img class="book-icon" src="/images/book.png" alt="Book icon" />
+          </section>
 
-            <li class="nav-event-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-2">15 FEB</p>
-                <p class="detail-text">12.00 - 20.00</p>
-              </section>
-              <h3 class="item-title">Bokklubb: Nordisk Noir</h3>
-              <p class="detail-text">
-                Månadens bokklubb fokuserar på nordisk kriminallitteratur.
-              </p>
-
-              <section class="event-icon-wrapper">
-                <img
-                  class="event-icon"
-                  src="/images/event-icon.png"
-                  alt="Event icon"
-                />
-                <p class="detail-text">I butik</p>
-              </section>
-
-              <label class="button-style-2">
-                <input type="checkbox" />
-                <span>Anmäl dig</span>
-              </label>
-            </li>
-
-            <li class="nav-event-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-3">15 FEB</p>
-                <p class="detail-text">12.00 - 20.00</p>
-              </section>
-              <h3 class="item-title">Poesiworkshop för nybörjare</h3>
-              <p class="detail-text">
-                Lär dig grunderna i att skriva poesi i en inspirerande och
-                stödjande miljö.
-              </p>
-
-              <section class="event-icon-wrapper">
-                <img
-                  class="event-icon"
-                  src="/images/event-icon.png"
-                  alt="Event icon"
-                />
-                <p class="detail-text">I butik</p>
-              </section>
-              <label class="button-style-3">
-                <input type="checkbox" />
-                <span>Anmäl dig</span>
-              </label>
-            </li>
-          </ul>
-        </section>
-
-        <!-- News -->
-        <section class="content-box" id="news">
-          <h2 class="content-title">Nyheter & Boktips</h2>
-          <p class="content-subtitle">
-            Håll dig uppdaterad med de senaste nyheterna från bokvärlden
-          </p>
-
-          <ul class="nav-news-section">
-            <li class="nav-news-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-1">Nyhet</p>
-                <p class="detail-text">5 februari 2025</p>
-              </section>
-              <h3 class="item-title">Nobelpriset i litteratur 2025</h3>
-              <p class="detail-text">
-                Årets Nobelpris i litteratur har tilldelats den norska
-                författaren Jon Fosse. Vi har nu hans verk i lager och
-                rekommenderar starkt hans senaste trilogi.
-              </p>
-              <button class="read-more">Läs mer →</button>
-            </li>
-
-            <li class="nav-news-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-2">Booktips</p>
-                <p class="detail-text">8 februari 2025</p>
-              </section>
-              <h3 class="item-title">Veckans boktips: Vintermys</h3>
-              <p class="detail-text">
-                När vintern är som mörkast behöver vi böcker som värmer hjärtat.
-                Här är våra fem bästa tips för mysiga läsupplevelser under
-                februari månad.
-              </p>
-              <button class="read-more">Läs mer →</button>
-            </li>
-
-            <li class="nav-news-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-3">Evenemang</p>
-                <p class="detail-text">5 februari 2025</p>
-              </section>
-              <h3 class="item-title">Ny bokklubb startar i mars</h3>
-              <p class="detail-text">
-                Vi startar en ny bokklubb fokuserad på kvinnliga författare från
-                hela världen. Första träffen blir 5 mars och vi börjar med
-                Chimamanda Ngozi Adichies "Americanah".
-              </p>
-              <button class="read-more">Läs mer →</button>
-            </li>
-
-            <li class="nav-news-item">
-              <section class="tag-info-wrapper">
-                <p class="tag-style-1">Butiken</p>
-                <p class="detail-text">1 februari 2025</p>
-              </section>
-              <h3 class="item-title">Nya öppettider från mars</h3>
-              <p class="detail-text">
-                Från och med mars utökar vi våra öppettider! Vi kommer att vara
-                öppna även på söndagar 12:00 - 16:00 för att ge er ännu fler
-                tillfällen att besöka oss.
-              </p>
-              <button class="read-more">Läs mer →</button>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <section class="kontakt-section" id="contact">
-        <h2>Vi finns här för dig</h2>
-        <ul>
-          <li>
-            <h3>Få svar på dina frågor</h3>
-            <p>Se tutorials och läs detaljerade artiklar i vårt hjälpcenter.</p>
-            <a href="#">Gå till hjälpcentret →</a>
-          </li>
-
-          <li>
-            <h3>Kontakta oss</h3>
-            <p>
-              Få support via chatt eller boka ett samtal med en
-              kundtjänstexpert.
+          <section class="nav-book-info-wrapper">
+            <h3 class="item-title">Moderna Klassiker</h3>
+            <p class="detail-text">
+              Tidlösa berättelser som formar vår tids literatur.
             </p>
-            <a href="#">Chata med oss →</a>
+            <p class="tag button-style-2">Klassiker</p>
+          </section>
+        </li>
+        <li class="nav-book-item">
+          <section class="nav-book-item-box">
+            <img class="book-icon" src="/images/book.png" alt="Book icon" />
+          </section>
+
+          <section class="nav-book-info-wrapper">
+            <h3 class="item-title">Lokala Författare</h3>
+            <p class="detail-text">Upptäck talanger från får egen region.</p>
+            <p class="tag button-style-3">Lokalt</p>
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <article
+      class="justify-center flex-col min-w-screen min-h-screen py-3"
+      id="events"
+    >
+      <!-- Events -->
+      <section class="content-box">
+        <h2 class="content-title">Kommande evenemang</h2>
+        <p class="content-subtitle">
+          Träffa författare, delta i bokklubbar och upplev litteraturens
+          gemenskap
+        </p>
+        <ul class="nav-event-section">
+          <li class="nav-event-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-1">15 FEB</p>
+              <p class="detail-text">12.00 - 20.00</p>
+            </section>
+            <h3 class="item-title">Författarträff med Anna Lindberg</h3>
+            <p class="detail-text">
+              En inspirerande dag med en av Sveriges mest älskade författare.
+            </p>
+
+            <section class="event-icon-wrapper">
+              <img
+                class="event-icon"
+                src="/images/event-icon.png"
+                alt="Event icon"
+              />
+              <p class="detail-text">I butik</p>
+            </section>
+
+            <label class="button-style-1">
+              <input type="checkbox" />
+              <span>Anmäl dig</span>
+            </label>
           </li>
 
-          <li>
-            <h3>Följ oss på sociala medier</h3>
-            <p>Håll dig uppdaterad med de senaste nyheterna och tipsen.</p>
-            <section class="kontakt-icons">
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-facebook"></i>
+          <li class="nav-event-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-2">15 FEB</p>
+              <p class="detail-text">12.00 - 20.00</p>
             </section>
+            <h3 class="item-title">Bokklubb: Nordisk Noir</h3>
+            <p class="detail-text">
+              Månadens bokklubb fokuserar på nordisk kriminallitteratur.
+            </p>
+
+            <section class="event-icon-wrapper">
+              <img
+                class="event-icon"
+                src="/images/event-icon.png"
+                alt="Event icon"
+              />
+              <p class="detail-text">I butik</p>
+            </section>
+
+            <label class="button-style-2">
+              <input type="checkbox" />
+              <span>Anmäl dig</span>
+            </label>
+          </li>
+
+          <li class="nav-event-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-3">15 FEB</p>
+              <p class="detail-text">12.00 - 20.00</p>
+            </section>
+            <h3 class="item-title">Poesiworkshop för nybörjare</h3>
+            <p class="detail-text">
+              Lär dig grunderna i att skriva poesi i en inspirerande och
+              stödjande miljö.
+            </p>
+
+            <section class="event-icon-wrapper">
+              <img
+                class="event-icon"
+                src="/images/event-icon.png"
+                alt="Event icon"
+              />
+              <p class="detail-text">I butik</p>
+            </section>
+            <label class="button-style-3">
+              <input type="checkbox" />
+              <span>Anmäl dig</span>
+            </label>
           </li>
         </ul>
       </section>
+
+      <!-- News -->
+      <section class="content-box" id="news">
+        <h2 class="content-title">Nyheter & Boktips</h2>
+        <p class="content-subtitle">
+          Håll dig uppdaterad med de senaste nyheterna från bokvärlden
+        </p>
+
+        <ul class="nav-news-section">
+          <li class="nav-news-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-1">Nyhet</p>
+              <p class="detail-text">5 februari 2025</p>
+            </section>
+            <h3 class="item-title">Nobelpriset i litteratur 2025</h3>
+            <p class="detail-text">
+              Årets Nobelpris i litteratur har tilldelats den norska författaren
+              Jon Fosse. Vi har nu hans verk i lager och rekommenderar starkt
+              hans senaste trilogi.
+            </p>
+            <button class="read-more">Läs mer →</button>
+          </li>
+
+          <li class="nav-news-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-2">Booktips</p>
+              <p class="detail-text">8 februari 2025</p>
+            </section>
+            <h3 class="item-title">Veckans boktips: Vintermys</h3>
+            <p class="detail-text">
+              När vintern är som mörkast behöver vi böcker som värmer hjärtat.
+              Här är våra fem bästa tips för mysiga läsupplevelser under
+              februari månad.
+            </p>
+            <button class="read-more">Läs mer →</button>
+          </li>
+
+          <li class="nav-news-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-3">Evenemang</p>
+              <p class="detail-text">5 februari 2025</p>
+            </section>
+            <h3 class="item-title">Ny bokklubb startar i mars</h3>
+            <p class="detail-text">
+              Vi startar en ny bokklubb fokuserad på kvinnliga författare från
+              hela världen. Första träffen blir 5 mars och vi börjar med
+              Chimamanda Ngozi Adichies "Americanah".
+            </p>
+            <button class="read-more">Läs mer →</button>
+          </li>
+
+          <li class="nav-news-item">
+            <section class="tag-info-wrapper">
+              <p class="tag-style-1">Butiken</p>
+              <p class="detail-text">1 februari 2025</p>
+            </section>
+            <h3 class="item-title">Nya öppettider från mars</h3>
+            <p class="detail-text">
+              Från och med mars utökar vi våra öppettider! Vi kommer att vara
+              öppna även på söndagar 12:00 - 16:00 för att ge er ännu fler
+              tillfällen att besöka oss.
+            </p>
+            <button class="read-more">Läs mer →</button>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <section class="kontakt-section" id="contact">
+      <h2>Vi finns här för dig</h2>
+      <ul>
+        <li>
+          <h3>Få svar på dina frågor</h3>
+          <p>Se tutorials och läs detaljerade artiklar i vårt hjälpcenter.</p>
+          <a href="#">Gå till hjälpcentret →</a>
+        </li>
+
+        <li>
+          <h3>Kontakta oss</h3>
+          <p>
+            Få support via chatt eller boka ett samtal med en kundtjänstexpert.
+          </p>
+          <a href="#">Chata med oss →</a>
+        </li>
+
+        <li>
+          <h3>Följ oss på sociala medier</h3>
+          <p>Håll dig uppdaterad med de senaste nyheterna och tipsen.</p>
+          <section class="kontakt-icons">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </section>
+        </li>
+      </ul>
     </section>
 
     <footer>
@@ -312,7 +309,7 @@
           </p>
           <label>
             <input type="email" placeholder="Din e-post" />
-            <button type="button">
+            <button type="submit">
               <i class="fa-solid fa-paper-plane icon-button"></i>
             </button>
           </label>
