@@ -1,9 +1,9 @@
 # Pärmar & Poesi
 
 ## Projekt beskrivning
-Vi har utvecklat en home-page till en lokal bokhandel. Elementen i main sektionen har till uppgift att agera som ett generelt navigationsystem och är tänkt att, vid eventuella implementeringar, ta besäkare till andra sidor av webbplatsen. 
+Vi har utvecklat en home-page till en lokal bokhandel. Elementen i main sektionen har till uppgift att agera som ett generellt navigationsystem och är tänkt att, vid eventuella implementeringar, ta besökare till andra sidor av webbplatsen. 
 
-## Verktyg/användna teknologier
+## Verktyg och teknologier
 - HTML5
 - CSS
 - SASS
@@ -11,7 +11,7 @@ Vi har utvecklat en home-page till en lokal bokhandel. Elementen i main sektione
 - Mixins och variabler
 - Media
 
-## Sektioner och 
+## Sektioner 
 - Header/navigation
 - Välkomstsektion/hero section
 - Utvadla böcker
