@@ -1,7 +1,7 @@
 # Pärmar & Poesi
 
 ## Deltagare (Grupp 4)
-- Amir Shameel
+- Ameer Shameel
 - William Engman
 - Pontus Petersson
 - Oscar Heljeberg
