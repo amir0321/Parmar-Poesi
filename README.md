@@ -1,5 +1,12 @@
 # Pärmar & Poesi
 
+## Deltagare (Grupp 4)
+- Amir Shameel
+- William Engman
+- Pontus Petersson
+- Oscar Heljeberg
+- Hussam Anwar
+
 ## Projekt beskrivning
 Vi har utvecklat en home-page till en lokal bokhandel. Elementen i main sektionen har till uppgift att agera som ett generellt navigationsystem och är tänkt att, vid eventuella implementeringar, ta besökare till andra sidor av webbplatsen. 
 
