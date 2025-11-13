@@ -1,9 +1,9 @@
 # Pärmar & Poesi
 
 ## Deltagare (Grupp 4)
-- Ameer Shameel
-- William Engman
-- Pontus Petersson
+- Ameer Shameel = header, footer, main, kopplat ihop all kod och ändrat på alla små detaljer
+- William Engman = Böcker, Evenemang, Nyheter
+- Pontus Petersson = Kontakt
 - Oscar Heljeberg
 - Hussam Anwar
 
